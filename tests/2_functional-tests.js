@@ -11,10 +11,10 @@ suite('Functional Tests', function() {
     chai
       .request(server)
       .get('/api/stock-prices')
-      .query({ stock: 'AAPL' }) // Replace with the actual stock symbol
+      .query({ stock: '$' }) // Replace with the actual stock symbol
       .end(function(err, res) {
         assert.equal(res.status, 200);
-        // Add more assertions to check the response as needed
+      
         done();
       });
   });
@@ -23,10 +23,10 @@ suite('Functional Tests', function() {
     chai
       .request(server)
       .get('/api/stock-prices')
-      .query({ stock: 'AAPL', like: true }) // Replace with the actual stock symbol
+      .query({ stock: '$', like: true }) // Replace with the actual stock symbol
       .end(function(err, res) {
         assert.equal(res.status, 200);
-        // Add more assertions to check the response as needed
+        
         done();
       });
   });
@@ -36,10 +36,10 @@ suite('Functional Tests', function() {
     chai
       .request(server)
       .get('/api/stock-prices')
-      .query({ stock: 'AAPL', like: true }) // Replace with the actual stock symbol
+      .query({ stock: '$', like: true }) // Replace with the actual stock symbol
       .end(function(err, res) {
         assert.equal(res.status, 200);
-        // Add more assertions to check the response as needed
+       
         done();
       });
   });
@@ -49,7 +49,7 @@ suite('Functional Tests', function() {
     chai
       .request(server)
       .get('/api/stock-prices')
-      .query({ stock: ['AAPL', 'GOOG'] }) // Replace with the actual stock symbols
+      .query({ stock: ['$', '£'] }) // Replace with the actual stock symbols
       .end(function(err, res) {
         assert.equal(res.status, 200);
         // Add more assertions to check the response as needed
@@ -62,7 +62,7 @@ suite('Functional Tests', function() {
     chai
       .request(server)
       .get('/api/stock-prices')
-      .query({ stock: ['AAPL', 'GOOG'], like: true }) // Replace with the actual stock symbols
+      .query({ stock: ['$', '£'], like: true }) // Replace with the actual stock symbols
       .end(function(err, res) {
         assert.equal(res.status, 200);
         // Add more assertions to check the response as needed
