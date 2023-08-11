@@ -11,7 +11,7 @@ suite('Functional Tests', function() {
     chai
       .request(server)
       .get('/api/stock-prices')
-      .query({ stock: '$' }) // Replace with the actual stock symbol
+      .query({ stock: '$' }) 
       .end(function(err, res) {
         assert.equal(res.status, 200);
       
@@ -23,7 +23,7 @@ suite('Functional Tests', function() {
     chai
       .request(server)
       .get('/api/stock-prices')
-      .query({ stock: '$', like: true }) // Replace with the actual stock symbol
+      .query({ stock: '$', like: true }) 
       .end(function(err, res) {
         assert.equal(res.status, 200);
         
@@ -36,7 +36,7 @@ suite('Functional Tests', function() {
     chai
       .request(server)
       .get('/api/stock-prices')
-      .query({ stock: '$', like: true }) // Replace with the actual stock symbol
+      .query({ stock: '$', like: true })
       .end(function(err, res) {
         assert.equal(res.status, 200);
        
@@ -49,10 +49,9 @@ suite('Functional Tests', function() {
     chai
       .request(server)
       .get('/api/stock-prices')
-      .query({ stock: ['$', '£'] }) // Replace with the actual stock symbols
+      .query({ stock: ['$', '£'] }) 
       .end(function(err, res) {
         assert.equal(res.status, 200);
-        // Add more assertions to check the response as needed
         done();
       });
   });
@@ -62,10 +61,9 @@ suite('Functional Tests', function() {
     chai
       .request(server)
       .get('/api/stock-prices')
-      .query({ stock: ['$', '£'], like: true }) // Replace with the actual stock symbols
+      .query({ stock: ['$', '£'], like: true }) 
       .end(function(err, res) {
         assert.equal(res.status, 200);
-        // Add more assertions to check the response as needed
         done();
       });
   });
